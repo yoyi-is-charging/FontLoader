@@ -1,8 +1,10 @@
-cmake_minimum_required(VERSION 3.10.2)
+cmake_minimum_required(VERSION 3.19.0)
 
 project("fontloader")
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(LINKER_FLAGS "-ffixed-x18 -Wl,--hash-style=both")
 set(C_FLAGS "-Werror=format -fdata-sections -ffunction-sections -fno-exceptions -fno-rtti -fno-threadsafe-statics")

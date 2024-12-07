@@ -12,7 +12,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:8.7.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -26,8 +26,8 @@ task clean(type: Delete) {
 ext {
     moduleId = 'font-loader'
     moduleName = 'Font Loader'
-    moduleDescription = 'Preload font modules for Android 12. DO NOT enable DenyList, or apps in the list will crash. For hide purposes, you should seek hiding modules like Shamiko.'
-    moduleAuthor = 'Rikka'
-    moduleVersionName = '1.0.0'
-    moduleVersionCode = 1
+    moduleDescription = 'Preload font modules for Android 12. Do not enable useless DenyList and use hide module for hiding ROOT instead!'
+    moduleAuthor = 'JingMatrix, Rikka'
+    moduleVersionName = '1.0.1'
+    moduleVersionCode = 2
 }
