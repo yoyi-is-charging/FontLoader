@@ -122,6 +122,7 @@ private:
         for (int i = 0; i < size; ++i) {
             auto string_size = read_int(companion);
             read_full(companion, path, string_size);
+            path[string_size] = '\0';
             fonts.emplace_back(path);
         }
 
