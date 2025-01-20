@@ -97,7 +97,6 @@ public:
     void preAppSpecialize(AppSpecializeArgs *args) override {
         InitCompanion();
         PreloadFonts(env, fonts);
-        HideFromMaps(fonts);
 
         api->setOption(zygisk::Option::DLCLOSE_MODULE_LIBRARY);
     }
