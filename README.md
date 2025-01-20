@@ -9,12 +9,9 @@ This module is a Zygisk module that is designed to solve the problem. The princi
 ## Usage
 
 1. Install FontLoader module in Magisk app
-2. Install hiding modules like Shamiko rather than use DenyList
-3. Disable DenyList (since modules will not load for apps in the list)
+2. Remove target apps with font customizations out of DenyList
 
-To be clear, DenyList is NOT for hide purposes. This is as topjohnwu, the author of Magisk, said. And using DenyList for hiding is not enough.
-
-Shamiko is a close-sourced hide module created by other people. Currently, it has not yet been widely released, you can download Shamiko from https://t.me/magiskalpha/388.
+To be clear, DenyList is NOT for hiding purposes. This is as topjohnwu, the author of Magisk, said. And using DenyList for hiding is not enough.
 
 ## Something else
 
