@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+    tags: [ v* ]
+  pull_request:
+  merge_group:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: "recursive"
+          fetch-depth: 0
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "21"
+
+      - name: Setup ninja                                                                             
+        uses: seanmiddleditch/gha-setup-ninja@master                                                  
+        with:                                                                                         
+          version: 1.12.0  
+
+      - name: Build with Gradle
+        run: |
+          ./gradlew build
+
+      - name: Upload release
+        uses: actions/upload-artifact@v4
+        with:
+          name: FontLoader-release
+          path: "out/release/*"
+
+      - name: Upload debug
+        uses: actions/upload-artifact@v4
+        with:
+          name: FontLoader-debug
+          path: "out/debug/*"
